@@ -1,0 +1,6 @@
+# !/bin/csh
+#PBS -N myjob
+#PBS -l nodes=12:ppn=8               
+
+cd /home/swayambhu/PP-3                 # Direct it to your current working directory
+mpirun -np "$1" -hostfile $PBS_NODEFILE ./test-mpi
